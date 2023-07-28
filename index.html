@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+	<title>dark mode</title>
+<style>
+	
+	#head{
+		color: seagreen;
+		text-align: center;
+	}
+	#butto{
+		margin-left:667px;
+	}
+
+
+</style>
+</head>
+<body id="headboy">
+	<h1 id="head">** Welcome to my page that will change different background-color **</h1>
+	<h1 id="head2"></h1>
+	<h1 id="head3"></h1>
+	<button id="butto">Dark mode</button>
+	<button id="button">light mode</button>
+	<button id="button3">Random mode</button> 
+	<script>
+		var x,y,z,randomcolor;
+		document.getElementById("button3").onclick=function()
+		{
+		x=Math.round(Math.random()*256);
+		y=Math.round(Math.random()*256);
+		z=Math.round(Math.random()*256);
+		randomcolor='rgb('+ x +','+ y +','+ z +')';
+		document.getElementById("headboy").style.background=randomcolor;
+		document.getElementById("head").innerHTML="** Welcome to my randomcolor page **";
+		}
+		
+		document.getElementById("butto").onclick=function()
+		{
+			document.getElementById("headboy").style.background="black";
+			document.getElementById("head").innerHTML="  ** Welcome to my dark mode page **";
+			
+		}
+		document.getElementById("button").onclick=function()
+		{
+			document.getElementById("headboy").style.background="white";
+			document.getElementById("head").innerHTML="  ** Welcome to my light mode page **";
+			
+			
+		}
+		
+	</script>
+</body>
+</html>
